@@ -19,6 +19,8 @@ public class main {
         vid6.IncreasePlayCount(25000000);
         vid7.IncreasePlayCount(25000000);
         vid8.IncreasePlayCount(25000000);
+
+        //try exception
         vid9.IncreasePlayCount(25000000);
         vid10.IncreasePlayCount(25000000);
 
@@ -38,6 +40,27 @@ public class main {
         user1.PrintAllVideoPlaycount();
         System.out.println("Total playcount : "+user1.GetTotalVideoPlayCount());
 
+        //try exception
+        for(int i = 0; i<85;i++){
+            vid1.IncreasePlayCount(25000000);
+        }
+        System.out.println("Total playcount : "+user1.GetTotalVideoPlayCount());
+        try {
+            SayaTubeVideo vid11 = new SayaTubeVideo("");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        try {
+            SayaTubeUser vid11 = new SayaTubeUser("");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        try {
+            SayaTubeVideo vid11 = new SayaTubeVideo("a");
+            vid11.IncreasePlayCount(-5);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
         for(int i = 0; i<85;i++){
             vid1.IncreasePlayCount(25000000);
         }
